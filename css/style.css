@@ -12,11 +12,48 @@ body #app header {
   background-color: #EEEEEE;
   height: 140px;
   padding: 18.5px 114.5px 19px 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 body #app header #logo {
   width: 166.71px;
   height: 83.36px;
   font-size: 83.36px;
+}
+
+body #app header #nav-buttons, body #app header #nav-links {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #app header #nav-buttons {
+  width: 131px;
+  height: 34px;
+}
+
+body #app header #nav-buttons .nav-button:first-child {
+  margin-right: 12px;
+}
+
+body #app header #nav-buttons .nav-button:nth-child(2n) {
+  margin-right: 16px;
+}
+
+body #app header #nav-buttons #login-button {
+  width: 56px;
+  height: 24px;
+  padding: 6px 0px 4px;
+  background-color: black;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 16.8px;
 }
 /*# sourceMappingURL=style.css.map */
