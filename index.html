@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版 RWD 測驗</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div id="logo">
+                LOGO
+            </div>
+            <nav>
+                <div id="nav-buttons"></div>
+                <ul id="nav-links">
+                    <li v-for="link in navLinks">{{ link }}</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="circle-items-area">
+                <div class="circle-item" v-for="circleItem in circleItems">
+                    {{ circleItem }}
+                </div>
+            </div>
+            <div id="list-area">
+                <div id="card">
+                    <div id="card-head">
+                        項目
+                    </div>
+                    <div id="card-body">
+                        <ul>
+                            <li>
+                                <span>ID</span>
+                                <span>日期</span>
+                                <span>事件</span>
+                                <span>刪除</span>
+                            </li>
+                            <li v-for="listItem in listItems">
+                                <span>{{ listItem.ID }}</span>
+                                <span>{{ listItem.date }}</span>
+                                <span>{{ listItem.event }}</span>
+                                <span>按鈕</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="img-area">
+
+            </div>
+            <footer>
+                FOOTER
+            </footer>
+        </main>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
