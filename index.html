@@ -8,6 +8,7 @@
     <title>切版 RWD 測驗</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                     </div>
                 </div>
                 <ul id="nav-links">
-                    <li v-for="link in navLinks">{{ link }}</li>
+                    <li v-for="link in navLinks"><span>{{ link }}</span></li>
                 </ul>
             </nav>
         </header>
@@ -39,27 +40,32 @@
             <div id="list-area">
                 <div id="card">
                     <div id="card-head">
-                        項目
+                        <span class="head-title">項目</span>
+                        <span class="decorative-line"></span>
                     </div>
                     <div id="card-body">
-                        <ul>
-                            <li>
-                                <span>ID</span>
-                                <span>日期</span>
-                                <span>事件</span>
-                                <span>刪除</span>
-                            </li>
-                            <li v-for="listItem in listItems">
-                                <span>{{ listItem.ID }}</span>
-                                <span>{{ listItem.date }}</span>
-                                <span>{{ listItem.event }}</span>
-                                <span>按鈕</span>
+                        <ul id="item-list">
+                            <li v-for="(listItem, index) in listItems" :class="index == 0 ? 'title' : 'item'">
+                                <span class="item-id">{{ listItem.ID }}</span>
+                                <span class="item-date">{{ listItem.date }}</span>
+                                <span class="item-event">{{ listItem.event }}</span>
+                                <span v-if="index == 0" class="item-action delete-title">{{ listItem.action }}</span>
+                                <div v-else class="item-action action-button">{{ listItem.action }}</div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div id="img-area">
+            <div id="img-links-area">
+                <ul id="img-links-list">
+                    <li class="img-link" v-for="(imgLink, index) in imgLinks" @click="switchIntroduction(index)">
+                        <img :src="officialURL + imgLink.url" :alt="imgLink.alt">
+                    </li>
+                </ul>
+                <div id="introduction-block">
+                    <h1>{{ currentIntroduction.title }}</h1>
+                    <p v-html="currentIntroduction.note"></p>
+                </div>
             </div>
             <footer>
                 FOOTER

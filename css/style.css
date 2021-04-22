@@ -1,6 +1,6 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 body {
@@ -11,7 +11,6 @@ body {
 body #app header {
   background-color: #EEEEEE;
   height: 140px;
-  padding: 18.5px 114.5px 19px 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,29 +23,34 @@ body #app header #logo {
   width: 166.71px;
   height: 83.36px;
   font-size: 83.36px;
+  margin: 18.5px 0px 19px 114.5px;
 }
 
-body #app header #nav-buttons, body #app header #nav-links {
+body #app header nav {
+  margin: 50px 114.5px 0px 0px;
+}
+
+body #app header nav #nav-buttons, body #app header nav #nav-links {
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body #app header #nav-buttons {
+body #app header nav #nav-buttons {
   width: 131px;
-  height: 34px;
+  height: 23px;
 }
 
-body #app header #nav-buttons .nav-button:first-child {
+body #app header nav #nav-buttons .nav-button:first-child {
   margin-right: 12px;
 }
 
-body #app header #nav-buttons .nav-button:nth-child(2n) {
+body #app header nav #nav-buttons .nav-button:nth-child(2n) {
   margin-right: 16px;
 }
 
-body #app header #nav-buttons #login-button {
+body #app header nav #nav-buttons #login-button {
   width: 56px;
   height: 24px;
   padding: 6px 0px 4px;
@@ -55,5 +59,223 @@ body #app header #nav-buttons #login-button {
   color: white;
   text-align: center;
   line-height: 16.8px;
+}
+
+body #app header nav #nav-links {
+  padding-left: 5px;
+  width: 530px;
+  height: 17px;
+  margin: 16px 0px 33px auto;
+}
+
+body #app header nav #nav-links li {
+  border-left: 1px solid black;
+  list-style: none;
+  font-size: 18px;
+  line-height: 21.6px;
+  padding: 0px 19px;
+}
+
+body #app header nav #nav-links li:last-child {
+  border-right: 1px solid black;
+}
+
+body #app header nav #nav-links li span {
+  cursor: pointer;
+}
+
+body #app header nav #nav-links li span:hover {
+  color: #00B6C4;
+}
+
+body #app main #circle-items-area {
+  width: 1440px;
+  height: 350px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: auto;
+  padding: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #app main #circle-items-area .circle-item {
+  width: 228.2px;
+  height: 228.2px;
+  border-radius: 228.2px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  line-height: 28.8px;
+}
+
+body #app main #list-area {
+  width: 100%;
+  height: 565px;
+  padding: 53px 0px;
+  background-color: #EEEEEE;
+}
+
+body #app main #list-area #card {
+  width: 1280px;
+  height: 458px;
+  margin: auto;
+}
+
+body #app main #list-area #card #card-head {
+  width: 100%;
+  height: 94px;
+  padding: 0px 40px 0px 32px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #app main #list-area #card #card-head .head-title {
+  display: inline-block;
+  color: white;
+  font-size: 24px;
+  line-height: 28.8px;
+  width: 52px;
+  margin-right: 25px;
+}
+
+body #app main #list-area #card #card-head .decorative-line {
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+body #app main #list-area #card #card-body {
+  width: 100%;
+  height: calc(100% - 94px);
+  padding: 0px 40px 0px 32px;
+  border: 1px solid black;
+}
+
+body #app main #list-area #card #card-body #item-list {
+  margin: 0;
+  padding: 0;
+}
+
+body #app main #list-area #card #card-body #item-list .title, body #app main #list-area #card #card-body #item-list .item {
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  padding: 0px 104px 0px 18px;
+  border-bottom: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  line-height: 28.8px;
+}
+
+body #app main #list-area #card #card-body #item-list .item-id {
+  width: 25px;
+  margin-right: 85px;
+}
+
+body #app main #list-area #card #card-body #item-list .item-date {
+  width: 55px;
+  margin-right: 165px;
+}
+
+body #app main #list-area #card #card-body #item-list .item-action {
+  margin-left: auto;
+}
+
+body #app main #list-area #card #card-body #item-list .delete-title {
+  margin-right: 15px;
+}
+
+body #app main #list-area #card #card-body #item-list .action-button {
+  width: 69px;
+  height: 32px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  line-height: 32px;
+}
+
+body #app main #img-links-area {
+  width: 1280px;
+  padding: 90px 0px 85px 75px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #app main #img-links-area #img-links-list {
+  padding: 0;
+  margin: 0;
+  width: 782px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #app main #img-links-area #img-links-list .img-link {
+  width: 220px;
+  height: 220px;
+  background-color: black;
+  list-style: none;
+}
+
+body #app main #img-links-area #img-links-list .img-link img {
+  width: 100%;
+}
+
+body #app main #img-links-area #introduction-block {
+  width: 350px;
+  height: 500px;
+  border: 1px solid black;
+  padding: 43px 30px 0px 37px;
+}
+
+body #app main #img-links-area #introduction-block h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 35px;
+}
+
+body #app main #img-links-area #introduction-block p {
+  width: 288px;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+
+body #app footer {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 100px;
+  background-color: #EEEEEE;
 }
 /*# sourceMappingURL=style.css.map */
