@@ -3,7 +3,20 @@
           box-sizing: border-box;
 }
 
-#app header {
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body #app header {
   background-color: #EEEEEE;
+  height: 140px;
+  padding: 18.5px 114.5px 19px 130px;
+}
+
+body #app header #logo {
+  width: 166.71px;
+  height: 83.36px;
+  font-size: 83.36px;
 }
 /*# sourceMappingURL=style.css.map */
