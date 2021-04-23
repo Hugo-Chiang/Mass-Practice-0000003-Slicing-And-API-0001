@@ -1,4 +1,4 @@
-let app = new Vue({
+const app = new Vue({
     el: '#app',
     data: {
         officialURL: 'http://multipleproduct.wacocolife.com/',
@@ -62,7 +62,6 @@ let app = new Vue({
 
         this.$http.post(api)
             .then((response) => {
-                console.log(response.data);
                 vm.imgLinks = response.data.items;
                 vm.currentIntroduction.title = vm.imgLinks[0].title;
                 vm.currentIntroduction.note = vm.imgLinks[0].note;

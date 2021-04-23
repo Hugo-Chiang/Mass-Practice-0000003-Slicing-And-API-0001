@@ -68,6 +68,12 @@ body #app header nav #nav-links {
   margin: 16px 0px 33px auto;
 }
 
+@media (max-width: 1280px) {
+  body #app header nav #nav-links {
+    display: none;
+  }
+}
+
 body #app header nav #nav-links .nav-link {
   border-left: 1px solid black;
   list-style: none;
@@ -120,21 +126,75 @@ body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
 }
 
 body #app main #circle-items-area {
+  width: 100%;
+  height: 350px;
+}
+
+body #app main #circle-items-area #carousel-block {
+  position: relative;
   width: 1440px;
   height: 350px;
   border-left: 1px solid black;
   border-right: 1px solid black;
-  margin: auto;
-  padding: 60px;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  left: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+  body #app main #circle-items-area #carousel-block {
+    width: 1108px;
+  }
+}
+
+@media (max-width: 1280px) {
+  body #app main #circle-items-area #carousel-block {
+    width: 728px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #circle-items-area #carousel-block {
+    width: 348px;
+  }
+}
+
+body #app main #circle-items-area #carousel-block #left-arrow:before {
+  content: '';
+  position: absolute;
+  left: calc(-1em + 1px);
+  top: 0.5em;
+  border: 0.5em solid transparent;
+  border-right-color: #eee9dc;
+}
+
+body #app main #circle-items-area #carousel-block #carousel-list {
+  position: absolute;
+  width: 1440px;
+  height: 350px;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0;
+  padding: 60px;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  top: 50%;
+  left: 50%;
 }
 
-body #app main #circle-items-area .circle-item {
+@media (max-width: 1440px) {
+  body #app main #circle-items-area #carousel-block #carousel-list {
+    left: 720px;
+  }
+}
+
+body #app main #circle-items-area #carousel-block #carousel-list .circle-item {
   width: 228.2px;
   height: 228.2px;
   border-radius: 228.2px;
@@ -248,6 +308,7 @@ body #app main #list-area #card #card-body #item-list .action-button {
 }
 
 body #app main #img-links-area {
+  border: 1px solid red;
   width: 1280px;
   padding: 90px 0px 85px 75px;
   margin: auto;
@@ -257,6 +318,29 @@ body #app main #img-links-area {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 1440px) {
+  body #app main #img-links-area {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 1280px) {
+  body #app main #img-links-area {
+    width: 100%;
+    padding: 90px 0px 85px 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #img-links-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 body #app main #img-links-area #img-links-list {
@@ -269,6 +353,31 @@ body #app main #img-links-area #img-links-list {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1280px) {
+  body #app main #img-links-area #img-links-list {
+    width: 474px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #img-links-area #img-links-list {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app main #img-links-area #img-links-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 350px;
+    margin-bottom: 30px;
+  }
 }
 
 body #app main #img-links-area #img-links-list .img-link {
@@ -276,6 +385,12 @@ body #app main #img-links-area #img-links-list .img-link {
   height: 220px;
   background-color: black;
   list-style: none;
+}
+
+@media (max-width: 1280px) {
+  body #app main #img-links-area #img-links-list .img-link {
+    margin-bottom: 30px;
+  }
 }
 
 body #app main #img-links-area #img-links-list .img-link img {
@@ -287,6 +402,12 @@ body #app main #img-links-area #introduction-block {
   height: 500px;
   border: 1px solid black;
   padding: 43px 30px 0px 37px;
+}
+
+@media (max-width: 1280px) {
+  body #app main #img-links-area #introduction-block {
+    margin: auto;
+  }
 }
 
 body #app main #img-links-area #introduction-block h1 {

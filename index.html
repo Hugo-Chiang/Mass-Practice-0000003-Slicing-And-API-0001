@@ -41,8 +41,12 @@
         </header>
         <main>
             <div id="circle-items-area">
-                <div class="circle-item" v-for="circleItem in circleItems">
-                    {{ circleItem }}
+                <div id="carousel-block">
+                    <ul id="carousel-list">
+                        <li class="circle-item" v-for="circleItem in circleItems">
+                            {{ circleItem }}
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div id="list-area">
