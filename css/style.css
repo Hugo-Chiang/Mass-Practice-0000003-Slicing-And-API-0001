@@ -1,6 +1,6 @@
 * {
-  -webkit-box-sizing: border-box !important;
-          box-sizing: border-box !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -68,24 +68,55 @@ body #app header nav #nav-links {
   margin: 16px 0px 33px auto;
 }
 
-body #app header nav #nav-links li {
+body #app header nav #nav-links .nav-link {
   border-left: 1px solid black;
   list-style: none;
   font-size: 18px;
   line-height: 21.6px;
   padding: 0px 19px;
+  position: relative;
 }
 
-body #app header nav #nav-links li:last-child {
+body #app header nav #nav-links .nav-link:last-child {
   border-right: 1px solid black;
 }
 
-body #app header nav #nav-links li span {
+body #app header nav #nav-links .nav-link span {
   cursor: pointer;
 }
 
-body #app header nav #nav-links li span:hover {
+body #app header nav #nav-links .nav-link span:hover {
   color: #00B6C4;
+}
+
+body #app header nav #nav-links .nav-link .floating-options {
+  width: 115px;
+  height: 88px;
+  padding: 20px 30px 15px;
+  background-color: black;
+  position: absolute;
+  top: calc(100% + 33px);
+  left: -1px;
+  color: white;
+}
+
+body #app header nav #nav-links .nav-link .floating-options ul {
+  margin: 0;
+  padding: 0;
+}
+
+body #app header nav #nav-links .nav-link .floating-options ul li {
+  padding: 0;
+  width: 54px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 21.6px;
+  list-style: none;
+  cursor: pointer;
+}
+
+body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
+  margin-bottom: 13px;
 }
 
 body #app main #circle-items-area {
