@@ -18,8 +18,12 @@
                 LOGO
             </div>
             <nav>
-                <div id="nav-buttons">
-                    <div class="collapse-menu" @click="nav.slide = !nav.slide"></div>
+                <div id="hamburger-menu">
+                    <input type="checkbox" v-model="nav.slide" />
+                    <span v-for="(span, index) in 3" :key="'span' + index"></span>
+                </div>
+                <!-- <div class="collapse-menu" @click="nav.slide = !nav.slide"></div> -->
+                <div id="nav-buttons" :class="{'nav-buttons-active': nav.slide}">
                     <div class="nav-button communit-button" :class="communityButton.class"
                         v-for="communityButton in communityButtons">
                         <img :src="communityButton.src" alt="">
@@ -28,7 +32,7 @@
                         登入
                     </div>
                 </div>
-                <ul id="nav-links" :class="{'active': nav.slide}">
+                <ul id="nav-links" :class="{'nav-links-active': nav.slide}">
                     <li v-for="(link, index) in nav.navLinks" class="nav-link"
                         @click="index == 4 && !floatingOptions.show ? floatingOptions.show = true : floatingOptions.show = false">
                         <span>{{ link }}</span>

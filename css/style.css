@@ -76,6 +76,95 @@ body #app header nav {
   }
 }
 
+body #app header nav #hamburger-menu {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+  z-index: 6;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 1280px) {
+  body #app header nav #hamburger-menu {
+    display: block;
+  }
+}
+
+body #app header nav #hamburger-menu input {
+  display: block;
+  position: absolute;
+  width: 43px;
+  height: 32px;
+  top: -5px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 4;
+}
+
+body #app header nav #hamburger-menu input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg) translate(1px, 6px);
+          transform: rotate(-45deg) translate(1px, 6px);
+}
+
+body #app header nav #hamburger-menu input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(45deg) translate(-2px, -10px);
+          transform: rotate(45deg) translate(-2px, -10px);
+}
+
+body #app header nav #hamburger-menu input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+@media (max-width: 991px) {
+  body #app header nav #hamburger-menu input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(-45deg) translate(1px, 5px);
+            transform: rotate(-45deg) translate(1px, 5px);
+  }
+}
+
+body #app header nav #hamburger-menu span {
+  display: block;
+  position: relative;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: black;
+  border-radius: 3px;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+body #app header nav #hamburger-menu span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+body #app header nav #hamburger-menu span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+@media (max-width: 991px) {
+  body #app header nav #hamburger-menu span {
+    width: 28px;
+    height: 3px;
+  }
+}
+
 body #app header nav #nav-buttons, body #app header nav #nav-links {
   margin-left: auto;
   display: -webkit-box;
@@ -86,27 +175,38 @@ body #app header nav #nav-buttons, body #app header nav #nav-links {
 body #app header nav #nav-buttons {
   width: 131px;
   height: 23px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
 @media (max-width: 1280px) {
   body #app header nav #nav-buttons {
-    width: calc(131px + 37px);
+    position: absolute;
+    -webkit-transform: translateZ(-10px);
+            transform: translateZ(-10px);
+    top: 103px;
+    left: 75%;
   }
 }
 
-body #app header nav #nav-buttons .collapse-menu {
-  width: 25px;
-  margin-right: 12px;
-  background-color: white;
-  display: none;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+@media (max-width: 991px) {
+  body #app header nav #nav-buttons {
+    top: 88px;
+    left: 135px;
+  }
 }
 
-@media (max-width: 1280px) {
-  body #app header nav #nav-buttons .collapse-menu {
-    display: block;
-    cursor: pointer;
+@media (max-width: 767px) {
+  body #app header nav #nav-buttons {
+    top: 88px;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app header nav #nav-buttons {
+    -webkit-transition: .5s linear;
+    transition: .5s linear;
+    top: calc(-1000% + 320px);
   }
 }
 
@@ -127,6 +227,31 @@ body #app header nav #nav-buttons #login-button {
   color: white;
   text-align: center;
   line-height: 16.8px;
+}
+
+body #app header nav .nav-buttons-active {
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+@media (max-width: 1280px) {
+  body #app header nav .nav-buttons-active {
+    top: 153px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app header nav .nav-buttons-active {
+    top: 168px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app header nav .nav-buttons-active {
+    -webkit-transition: .5s linear;
+    transition: .5s linear;
+    top: 320px !important;
+  }
 }
 
 body #app header nav #nav-links {
@@ -156,12 +281,15 @@ body #app header nav #nav-links {
 
 @media (max-width: 991px) {
   body #app header nav #nav-links {
-    top: 70px;
+    height: 95px;
+    padding: 15px 135px 60px;
+    top: 25px;
   }
 }
 
 @media (max-width: 767px) {
   body #app header nav #nav-links {
+    padding: 30px 135px 15px;
     top: -1000%;
     height: 100vh;
     display: -webkit-box;
@@ -251,20 +379,20 @@ body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
   margin-bottom: 13px;
 }
 
-body #app header nav .active {
+body #app header nav .nav-links-active {
   top: 140px !important;
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }
 
 @media (max-width: 991px) {
-  body #app header nav .active {
+  body #app header nav .nav-links-active {
     top: 120px !important;
   }
 }
 
 @media (max-width: 767px) {
-  body #app header nav .active {
+  body #app header nav .nav-links-active {
     top: 100% !important;
   }
 }
@@ -552,7 +680,6 @@ body #app main #list-area #card #card-body #item-list .action-button {
 }
 
 body #app main #img-links-area {
-  border: 1px solid red;
   width: 1280px;
   padding: 90px 0px 85px 75px;
   margin: auto;
