@@ -60,9 +60,12 @@
                             <li v-for="(listItem, index) in listItems" :class="index == 0 ? 'title' : 'item'">
                                 <span class="item-id">{{ listItem.ID }}</span>
                                 <span class="item-date">{{ listItem.date }}</span>
-                                <span class="item-event">{{ listItem.event }}</span>
-                                <span v-if="index == 0" class="item-action delete-title">{{ listItem.action }}</span>
-                                <div v-else class="item-action action-button">{{ listItem.action }}</div>
+                                <div class="mobile-collapse">
+                                    <span class="item-event">{{ listItem.event }}</span>
+                                    <span v-if="index == 0" class="item-action delete-title">{{ listItem.action
+                                        }}</span>
+                                    <div v-else class="item-action action-button">{{ listItem.action }}</div>
+                                </div>
                             </li>
                         </ul>
                     </div>

@@ -160,15 +160,6 @@ body #app main #circle-items-area #carousel-block {
   }
 }
 
-body #app main #circle-items-area #carousel-block #left-arrow:before {
-  content: '';
-  position: absolute;
-  left: calc(-1em + 1px);
-  top: 0.5em;
-  border: 0.5em solid transparent;
-  border-right-color: #eee9dc;
-}
-
 body #app main #circle-items-area #carousel-block #carousel-list {
   position: absolute;
   width: 1440px;
@@ -225,6 +216,18 @@ body #app main #list-area #card {
   margin: auto;
 }
 
+@media (max-width: 1280px) {
+  body #app main #list-area #card {
+    width: 728px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card {
+    width: 348px;
+  }
+}
+
 body #app main #list-area #card #card-head {
   width: 100%;
   height: 94px;
@@ -245,6 +248,18 @@ body #app main #list-area #card #card-head .head-title {
   line-height: 28.8px;
   width: 52px;
   margin-right: 25px;
+}
+
+@media (max-width: 1280px) {
+  body #app main #list-area #card #card-head .head-title {
+    width: 62px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-head .head-title {
+    width: 72px;
+  }
 }
 
 body #app main #list-area #card #card-head .decorative-line {
@@ -280,18 +295,69 @@ body #app main #list-area #card #card-body #item-list .title, body #app main #li
   line-height: 28.8px;
 }
 
+@media (max-width: 1280px) {
+  body #app main #list-area #card #card-body #item-list .title, body #app main #list-area #card #card-body #item-list .item {
+    padding: 0px 54px 0px 18px;
+  }
+}
+
 body #app main #list-area #card #card-body #item-list .item-id {
   width: 25px;
   margin-right: 85px;
 }
 
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .item-id {
+    margin-right: 115px;
+  }
+}
+
 body #app main #list-area #card #card-body #item-list .item-date {
-  width: 55px;
+  width: 75px;
   margin-right: 165px;
 }
 
-body #app main #list-area #card #card-body #item-list .item-action {
+@media (max-width: 1280px) {
+  body #app main #list-area #card #card-body #item-list .item-date {
+    width: 105px;
+    margin-right: 135px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .item-date {
+    margin-right: 0px;
+  }
+}
+
+body #app main #list-area #card #card-body #item-list .mobile-collapse {
+  width: 100%;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .mobile-collapse {
+    position: absolute;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .mobile-collapse .item-event {
+    display: none;
+  }
+}
+
+body #app main #list-area #card #card-body #item-list .mobile-collapse .item-action {
   margin-left: auto;
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .mobile-collapse .item-action {
+    display: none;
+  }
 }
 
 body #app main #list-area #card #card-body #item-list .delete-title {
