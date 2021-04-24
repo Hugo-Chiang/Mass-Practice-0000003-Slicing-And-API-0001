@@ -10,11 +10,11 @@ body {
 
 body #app {
   position: relative;
-  z-index: 0;
 }
 
 body #app header {
   background-color: #EEEEEE;
+  width: 100%;
   height: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,6 +22,24 @@ body #app header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: fixed;
+  z-index: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+@media (max-width: 1280px) {
+  body #app header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app header {
+    height: 120px;
+  }
 }
 
 body #app header #logo {
@@ -31,8 +49,31 @@ body #app header #logo {
   margin: 18.5px 0px 19px 114.5px;
 }
 
+@media (max-width: 1280px) {
+  body #app header #logo {
+    margin: 0px 0px 0px 114.5px;
+    line-height: 83.36px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app header #logo {
+    width: 180px;
+    height: 80px;
+    font-size: 63px;
+    line-height: 63spx;
+    margin: 18.5px 0px 19px 114.5px;
+  }
+}
+
 body #app header nav {
   margin: 50px 114.5px 0px 0px;
+}
+
+@media (max-width: 1280px) {
+  body #app header nav {
+    margin: 0px 114.5px 0px 0px;
+  }
 }
 
 body #app header nav #nav-buttons, body #app header nav #nav-links {
@@ -101,13 +142,38 @@ body #app header nav #nav-links {
     height: 50px;
     padding: 15px 135px;
     position: absolute;
+    z-index: -1;
     margin: 0;
     top: 90px;
     left: 0%;
     -webkit-transition: .3s linear;
     transition: .3s linear;
-    z-index: -1;
     background-color: lightgrey;
+    -webkit-transform: translateZ(-10px);
+            transform: translateZ(-10px);
+  }
+}
+
+@media (max-width: 991px) {
+  body #app header nav #nav-links {
+    top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app header nav #nav-links {
+    top: -1000%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: .5s linear;
+    transition: .5s linear;
+    position: fixed;
   }
 }
 
@@ -130,6 +196,23 @@ body #app header nav #nav-links .nav-link span {
 
 body #app header nav #nav-links .nav-link span:hover {
   color: #00B6C4;
+}
+
+@media (max-width: 1280px) {
+  body #app header nav #nav-links .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app header nav #nav-links .nav-link {
+    border-left: 4px solid black;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  body #app header nav #nav-links .nav-link:last-child {
+    border-right: none;
+  }
 }
 
 body #app header nav #nav-links .nav-link .floating-options {
@@ -174,9 +257,28 @@ body #app header nav .active {
   transition: .3s linear;
 }
 
+@media (max-width: 991px) {
+  body #app header nav .active {
+    top: 120px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app header nav .active {
+    top: 100% !important;
+  }
+}
+
 body #app main {
+  padding-top: 140px;
   position: relative;
   z-index: -2;
+}
+
+@media (max-width: 991px) {
+  body #app main {
+    padding-top: 120px;
+  }
 }
 
 body #app main #circle-items-area {
