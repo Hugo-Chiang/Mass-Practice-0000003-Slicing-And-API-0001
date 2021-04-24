@@ -2,7 +2,10 @@ const app = new Vue({
     el: '#app',
     data: {
         officialURL: 'http://multipleproduct.wacocolife.com/',
-        navLinks: ['首頁', '關於我們', '最新消息', '服務項目', 'Q&A活動'],
+        nav: {
+            slide: false,
+            navLinks: ['首頁', '關於我們', '最新消息', '服務項目', 'Q&A活動'],
+        },
         floatingOptions: {
             show: false,
             content: ['問題一', '問題二']
@@ -10,9 +13,11 @@ const app = new Vue({
         circleItems: ['項目一', '項目二', '項目三', '項目四'],
         communityButtons: {
             facebook: {
+                class: ['facebook'],
                 src: '/img/facebook_icon.png'
             },
             line: {
+                class: ['line'],
                 src: '/img/line_icon.png'
 
             }

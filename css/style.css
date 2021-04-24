@@ -8,6 +8,11 @@ body {
   margin: 0;
 }
 
+body #app {
+  position: relative;
+  z-index: 0;
+}
+
 body #app header {
   background-color: #EEEEEE;
   height: 140px;
@@ -42,11 +47,33 @@ body #app header nav #nav-buttons {
   height: 23px;
 }
 
-body #app header nav #nav-buttons .nav-button:first-child {
+@media (max-width: 1280px) {
+  body #app header nav #nav-buttons {
+    width: calc(131px + 37px);
+  }
+}
+
+body #app header nav #nav-buttons .collapse-menu {
+  width: 25px;
+  margin-right: 12px;
+  background-color: white;
+  display: none;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (max-width: 1280px) {
+  body #app header nav #nav-buttons .collapse-menu {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+body #app header nav #nav-buttons .facebook {
   margin-right: 12px;
 }
 
-body #app header nav #nav-buttons .nav-button:nth-child(2n) {
+body #app header nav #nav-buttons .line {
   margin-right: 16px;
 }
 
@@ -70,7 +97,17 @@ body #app header nav #nav-links {
 
 @media (max-width: 1280px) {
   body #app header nav #nav-links {
-    display: none;
+    width: 100%;
+    height: 50px;
+    padding: 15px 135px;
+    position: absolute;
+    margin: 0;
+    top: 90px;
+    left: 0%;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+    z-index: -1;
+    background-color: lightgrey;
   }
 }
 
@@ -106,6 +143,12 @@ body #app header nav #nav-links .nav-link .floating-options {
   color: white;
 }
 
+@media (max-width: 1280px) {
+  body #app header nav #nav-links .nav-link .floating-options {
+    top: 33px;
+  }
+}
+
 body #app header nav #nav-links .nav-link .floating-options ul {
   margin: 0;
   padding: 0;
@@ -123,6 +166,17 @@ body #app header nav #nav-links .nav-link .floating-options ul li {
 
 body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
   margin-bottom: 13px;
+}
+
+body #app header nav .active {
+  top: 140px !important;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+body #app main {
+  position: relative;
+  z-index: -2;
 }
 
 body #app main #circle-items-area {

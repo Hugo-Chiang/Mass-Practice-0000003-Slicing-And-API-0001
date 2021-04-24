@@ -19,18 +19,20 @@
             </div>
             <nav>
                 <div id="nav-buttons">
-                    <div class="nav-button communit-button" v-for="communityButton in communityButtons">
+                    <div class="collapse-menu" @click="nav.slide = !nav.slide"></div>
+                    <div class="nav-button communit-button" :class="communityButton.class"
+                        v-for="communityButton in communityButtons">
                         <img :src="communityButton.src" alt="">
                     </div>
                     <div id="login-button" class="nav-button">
                         登入
                     </div>
                 </div>
-                <ul id="nav-links">
-                    <li v-for="(link, index) in navLinks" class="nav-link"
+                <ul id="nav-links" :class="{'active': nav.slide}">
+                    <li v-for="(link, index) in nav.navLinks" class="nav-link"
                         @click="index == 4 && !floatingOptions.show ? floatingOptions.show = true : floatingOptions.show = false">
                         <span>{{ link }}</span>
-                        <div v-if="index  == 4" v-show="floatingOptions.show" class="floating-options">
+                        <div v-if="index  == 4" v-show="floatingOptions.show && nav.slide" class="floating-options">
                             <ul>
                                 <li v-for="floatingOption in floatingOptions.content">{{ floatingOption }}</li>
                             </ul>
