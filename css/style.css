@@ -279,7 +279,7 @@ body #app main #list-area #card #card-body #item-list {
   padding: 0;
 }
 
-body #app main #list-area #card #card-body #item-list .title, body #app main #list-area #card #card-body #item-list .item {
+body #app main #list-area #card #card-body #item-list .title-item, body #app main #list-area #card #card-body #item-list .item {
   list-style: none;
   width: 100%;
   height: 60px;
@@ -296,8 +296,30 @@ body #app main #list-area #card #card-body #item-list .title, body #app main #li
 }
 
 @media (max-width: 1280px) {
-  body #app main #list-area #card #card-body #item-list .title, body #app main #list-area #card #card-body #item-list .item {
+  body #app main #list-area #card #card-body #item-list .title-item, body #app main #list-area #card #card-body #item-list .item {
     padding: 0px 54px 0px 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .title-item, body #app main #list-area #card #card-body #item-list .item {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .title-item {
+    padding: 0px 24px 0px 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  body #app main #list-area #card #card-body #item-list .item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    cursor: pointer;
+    height: 80px;
+    padding: 10px 24px 10px 18px;
   }
 }
 
@@ -308,18 +330,18 @@ body #app main #list-area #card #card-body #item-list .item-id {
 
 @media (max-width: 991px) {
   body #app main #list-area #card #card-body #item-list .item-id {
-    margin-right: 115px;
+    margin-right: 45px;
   }
 }
 
 body #app main #list-area #card #card-body #item-list .item-date {
-  width: 75px;
+  width: 65px;
   margin-right: 165px;
 }
 
 @media (max-width: 1280px) {
   body #app main #list-area #card #card-body #item-list .item-date {
-    width: 105px;
+    width: 55px;
     margin-right: 135px;
   }
 }
@@ -330,37 +352,37 @@ body #app main #list-area #card #card-body #item-list .item-date {
   }
 }
 
-body #app main #list-area #card #card-body #item-list .mobile-collapse {
-  width: 100%;
-  display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body #app main #list-area #card #card-body #item-list .mobile-title {
+  display: none;
 }
 
 @media (max-width: 991px) {
-  body #app main #list-area #card #card-body #item-list .mobile-collapse {
-    position: absolute;
+  body #app main #list-area #card #card-body #item-list .mobile-title {
+    display: inline-block;
   }
 }
 
 @media (max-width: 991px) {
-  body #app main #list-area #card #card-body #item-list .mobile-collapse .item-event {
-    display: none;
+  body #app main #list-area #card #card-body #item-list .item-event {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    display: block;
   }
 }
 
-body #app main #list-area #card #card-body #item-list .mobile-collapse .item-action {
+body #app main #list-area #card #card-body #item-list .item-action {
   margin-left: auto;
 }
 
 @media (max-width: 991px) {
-  body #app main #list-area #card #card-body #item-list .mobile-collapse .item-action {
+  body #app main #list-area #card #card-body #item-list .event-title {
     display: none;
   }
 }
 
 body #app main #list-area #card #card-body #item-list .delete-title {
+  width: 75ppx;
   margin-right: 15px;
 }
 

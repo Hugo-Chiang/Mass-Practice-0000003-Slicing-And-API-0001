@@ -57,15 +57,18 @@
                     </div>
                     <div id="card-body">
                         <ul id="item-list">
-                            <li v-for="(listItem, index) in listItems" :class="index == 0 ? 'title' : 'item'">
-                                <span class="item-id">{{ listItem.ID }}</span>
-                                <span class="item-date">{{ listItem.date }}</span>
-                                <div class="mobile-collapse">
-                                    <span class="item-event">{{ listItem.event }}</span>
-                                    <span v-if="index == 0" class="item-action delete-title">{{ listItem.action
-                                        }}</span>
-                                    <div v-else class="item-action action-button">{{ listItem.action }}</div>
-                                </div>
+                            <li v-for="(listItem, index) in listItems" :class="index == 0 ? 'title-item' : 'item'"
+                                @click="listItem.show = !listItem.show">
+                                <span class="item-id" :class="index == 0 ? 'id-title' : ''">{{ listItem.ID
+                                    }}</span>
+                                <span class="item-date" :class="index == 0 ? 'date-title' : ''">{{ listItem.date
+                                    }}</span>
+                                <span class="item-event" :class="index == 0 ? 'event-title' : ''"><span
+                                        class="mobile-title">事件：</span>{{
+                                    listItem.event }}</span>
+                                <span v-if="index == 0" class="item-action delete-title">{{ listItem.action
+                                    }}</span>
+                                <div v-else class="item-action action-button">{{ listItem.action }}</div>
                             </li>
                         </ul>
                     </div>

@@ -28,19 +28,23 @@ const app = new Vue({
                 ID: '01',
                 date: '08/14',
                 event: '文案一',
-                action: '按鈕'
+                action: '按鈕',
+                show: false
             },
             {
                 ID: '02',
                 date: '02/14',
                 event: '文案二',
-                action: '按鈕'
+                action: '按鈕',
+                show: false
             },
             {
                 ID: '03',
                 date: '01/12',
                 event: '文案三',
-                action: '按鈕'
+                action: '按鈕',
+                show: false
+
             },
         ],
         imgLinks: [],
