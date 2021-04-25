@@ -66,15 +66,13 @@ body #app header #logo {
 
 @media (max-width: 1280px) {
   body #app header #logo {
-    margin: 0px 0px 0px 114.5px;
-    line-height: 83.36px;
+    margin: 0px 0px 0px 138px;
   }
 }
 
 @media (max-width: 991px) {
   body #app header #logo {
     font-size: 63px;
-    margin: 18.5px 0px 19px 114.5px;
   }
 }
 
@@ -87,13 +85,13 @@ body #app header #logo {
 @media (max-width: 576px) {
   body #app header #logo {
     font-size: 33px;
-    margin: 18.5px 0px 19px 114.5px;
+    margin: 0px 0px 0px 114.5px;
   }
 }
 
 @media (max-width: 420px) {
   body #app header #logo {
-    margin: 18.5px 0px 19px 44.5px;
+    margin: 0px 0px 0px 44.5px;
   }
 }
 
@@ -102,6 +100,12 @@ body #app header nav {
 }
 
 @media (max-width: 1280px) {
+  body #app header nav {
+    margin: 0px 138px 0px 0px;
+  }
+}
+
+@media (max-width: 576px) {
   body #app header nav {
     margin: 0px 114.5px 0px 0px;
   }
@@ -135,13 +139,19 @@ body #app header nav #hamburger-menu {
 body #app header nav #hamburger-menu input {
   display: block;
   position: absolute;
-  width: 43px;
-  height: 32px;
+  width: 33px;
+  height: 25px;
   top: -5px;
   left: -5px;
   cursor: pointer;
   opacity: 0;
   z-index: 4;
+}
+
+@media (max-width: 991px) {
+  body #app header nav #hamburger-menu input {
+    width: 30px;
+  }
 }
 
 body #app header nav #hamburger-menu input:checked ~ span {
@@ -294,7 +304,7 @@ body #app header nav .nav-buttons-active {
 }
 
 body #app header nav #nav-links {
-  padding-left: 5px;
+  padding-left: 11.5px;
   width: 530px;
   height: 17px;
   margin: 16px 0px 33px auto;
@@ -410,7 +420,7 @@ body #app header nav #nav-links .nav-link .floating-options ul li {
   width: 54px;
   height: 18px;
   font-size: 18px;
-  line-height: 21.6px;
+  line-height: 18px;
   list-style: none;
   cursor: pointer;
 }
@@ -524,7 +534,7 @@ body #app main #circle-items-area #carousel-block #carousel-list .circle-item {
       -ms-flex-align: center;
           align-items: center;
   font-size: 24px;
-  line-height: 28.8px;
+  line-height: 24px;
 }
 
 body #app main #list-area {
@@ -569,7 +579,7 @@ body #app main #list-area #card #card-head .head-title {
   display: inline-block;
   color: white;
   font-size: 24px;
-  line-height: 28.8px;
+  line-height: 24px;
   width: 52px;
   margin-right: 25px;
 }
@@ -616,7 +626,7 @@ body #app main #list-area #card #card-body #item-list .title-item, body #app mai
       -ms-flex-align: center;
           align-items: center;
   font-size: 24px;
-  line-height: 28.8px;
+  line-height: 24px;
 }
 
 @media (max-width: 1280px) {
@@ -716,7 +726,7 @@ body #app main #list-area #card #card-body #item-list .action-button {
   border: 1px solid black;
   font-size: 16px;
   text-align: center;
-  line-height: 32px;
+  line-height: 30px;
 }
 
 body #app main #img-links-area {
@@ -823,14 +833,15 @@ body #app main #img-links-area #introduction-block {
 
 body #app main #img-links-area #introduction-block h1 {
   font-size: 50px;
-  line-height: 60px;
+  font-weight: 500;
+  line-height: 50px;
   margin-bottom: 35px;
 }
 
 body #app main #img-links-area #introduction-block p {
   width: 288px;
   font-size: 18px;
-  line-height: 21.6px;
+  line-height: 18px;
 }
 
 body #app footer {

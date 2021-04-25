@@ -49,7 +49,7 @@
                     <li v-for="(link, index) in nav.navLinks" class="nav-link"
                         @click="index == 4 && !floatingOptions.show ? floatingOptions.show = true : floatingOptions.show = false">
                         <span>{{ link }}</span>
-                        <div v-if="index  == 4" v-show="floatingOptions.show && nav.slide" class="floating-options">
+                        <div v-if="index  == 4" v-show="floatingOptions.show" class="floating-options">
                             <ul>
                                 <li v-for="floatingOption in floatingOptions.content">{{ floatingOption }}</li>
                             </ul>

@@ -85,7 +85,9 @@ const app = new Vue({
         nav: {
             // 監看（方法）：漢堡選單摺疊時，浮動選單狀態一併重置
             handler(newObj) {
-                if (!newObj.slide) {
+                let windowWidth = window.innerWidth;
+
+                if (!newObj.slide && windowWidth <= 1280) {
                     this.floatingOptions.show = false;
                 }
             },
