@@ -699,7 +699,6 @@ body #app main #list-area #card #card-body #item-list .title-item, body #app mai
   body #app main #list-area #card #card-body #item-list .item {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    cursor: pointer;
     height: 80px;
     padding: 10px 24px 10px 18px;
   }
@@ -774,6 +773,7 @@ body #app main #list-area #card #card-body #item-list .action-button {
   font-size: 16px;
   text-align: center;
   line-height: 30px;
+  cursor: pointer;
 }
 
 body #app main #img-links-area {
