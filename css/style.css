@@ -58,11 +58,27 @@ body #app header #logo {
 
 @media (max-width: 991px) {
   body #app header #logo {
-    width: 180px;
-    height: 80px;
     font-size: 63px;
-    line-height: 63spx;
     margin: 18.5px 0px 19px 114.5px;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app header #logo {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 576px) {
+  body #app header #logo {
+    font-size: 33px;
+    margin: 18.5px 0px 19px 114.5px;
+  }
+}
+
+@media (max-width: 420px) {
+  body #app header #logo {
+    margin: 18.5px 0px 19px 44.5px;
   }
 }
 
@@ -73,6 +89,12 @@ body #app header nav {
 @media (max-width: 1280px) {
   body #app header nav {
     margin: 0px 114.5px 0px 0px;
+  }
+}
+
+@media (max-width: 420px) {
+  body #app header nav {
+    margin: 0px 44.5px 0px 0px;
   }
 }
 
@@ -127,8 +149,8 @@ body #app header nav #hamburger-menu input:checked ~ span:nth-last-child(3) {
 @media (max-width: 991px) {
   body #app header nav #hamburger-menu input:checked ~ span {
     opacity: 1;
-    -webkit-transform: rotate(-45deg) translate(1px, 5px);
-            transform: rotate(-45deg) translate(1px, 5px);
+    -webkit-transform: rotate(-45deg) translate(2px, 5px);
+            transform: rotate(-45deg) translate(2px, 5px);
   }
 }
 
@@ -177,6 +199,7 @@ body #app header nav #nav-buttons {
   height: 23px;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+  cursor: pointer;
 }
 
 @media (max-width: 1280px) {

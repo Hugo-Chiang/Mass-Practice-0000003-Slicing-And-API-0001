@@ -60,6 +60,7 @@ const app = new Vue({
 
     },
     methods: {
+        // 方法（函式）：根據傳入索引切換文字介紹
         switchIntroduction(index) {
             this.currentIntroduction.title = this.imgLinks[index].title;
             this.currentIntroduction.note = this.imgLinks[index].note;
@@ -80,4 +81,15 @@ const app = new Vue({
             });
 
     },
+    watch: {
+        nav: {
+            // 監看（方法）：漢堡選單摺疊時，浮動選單狀態一併重置
+            handler(newObj) {
+                if (!newObj.slide) {
+                    this.floatingOptions.show = false;
+                }
+            },
+            deep: true
+        }
+    }
 })

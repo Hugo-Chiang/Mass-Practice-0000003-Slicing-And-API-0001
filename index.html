@@ -7,31 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>切版 RWD 測驗</title>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- 導入 Vue 及其函式庫 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
 </head>
 
 <body>
     <div id="app">
+        <!-- 標頭開始 -->
         <header>
+            <!-- 商標開始 -->
             <div id="logo">
                 LOGO
             </div>
+            <!-- 商標結束 -->
+            <!-- 導覽列開始 -->
             <nav>
+                <!-- 漢堡選單開始 -->
                 <div id="hamburger-menu">
                     <input type="checkbox" v-model="nav.slide" />
                     <span v-for="(span, index) in 3" :key="'span' + index"></span>
                 </div>
-                <!-- <div class="collapse-menu" @click="nav.slide = !nav.slide"></div> -->
+                <!-- 漢堡選單結束 -->
+                <!-- 導覽按鈕開始 -->
                 <div id="nav-buttons" :class="{'nav-buttons-active': nav.slide}">
+                    <!-- 社群按鈕開始 -->
                     <div class="nav-button communit-button" :class="communityButton.class"
                         v-for="communityButton in communityButtons">
                         <img :src="communityButton.src" alt="">
                     </div>
+                    <!-- 社群按鈕結束 -->
+                    <!-- 登入鍵開始 -->
                     <div id="login-button" class="nav-button">
                         登入
                     </div>
+                    <!-- 登入鍵結束 -->
                 </div>
+                <!-- 導覽按鈕結束 -->
+                <!-- 導覽連結開始 -->
                 <ul id="nav-links" :class="{'nav-links-active': nav.slide}">
                     <li v-for="(link, index) in nav.navLinks" class="nav-link"
                         @click="index == 4 && !floatingOptions.show ? floatingOptions.show = true : floatingOptions.show = false">
@@ -43,9 +56,14 @@
                         </div>
                     </li>
                 </ul>
+                <!-- 導覽連結結束 -->
             </nav>
+            <!-- 導覽列結束 -->
         </header>
+        <!-- 標頭結束 -->
+        <!-- 主要內容開始 -->
         <main>
+            <!-- 輪播區開始 -->
             <div id="circle-items-area">
                 <div id="carousel-block">
                     <ul id="carousel-list">
@@ -55,12 +73,18 @@
                     </ul>
                 </div>
             </div>
+            <!-- 輪播區結束 -->
+            <!-- 項目清單區開始 -->
             <div id="list-area">
+                <!-- 卡片開始 -->
                 <div id="card">
+                    <!-- 卡片標頭開始 -->
                     <div id="card-head">
                         <span class="head-title">項目</span>
                         <span class="decorative-line"></span>
                     </div>
+                    <!-- 卡片標頭結束 -->
+                    <!-- 卡片主體開始 -->
                     <div id="card-body">
                         <ul id="item-list">
                             <li v-for="(listItem, index) in listItems" :class="index == 0 ? 'title-item' : 'item'"
@@ -78,25 +102,35 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- 卡片主體結束 -->
                 </div>
+                <!-- 卡片結束 -->
             </div>
+            <!-- 項目清單區結束 -->
+            <!-- 圖片連結區開始 -->
             <div id="img-links-area">
+                <!-- 圖片連結開始 -->
                 <ul id="img-links-list">
                     <li class="img-link" v-for="(imgLink, index) in imgLinks" @click="switchIntroduction(index)">
                         <img :src="officialURL + imgLink.url" :alt="imgLink.alt">
                     </li>
                 </ul>
+                <!-- 圖片連結結束 -->
+                <!-- 文字介紹開始 -->
                 <div id="introduction-block">
                     <h1>{{ currentIntroduction.title }}</h1>
                     <p v-html="currentIntroduction.note"></p>
                 </div>
+                <!-- 文字介紹結束 -->
             </div>
+            <!-- 圖片連結區結束 -->
+            <!-- 頁腳開始 -->
             <footer>
                 FOOTER
             </footer>
+            <!-- 頁腳結束 -->
         </main>
     </div>
-
     <script src="/js/main.js"></script>
 </body>
 
