@@ -64,9 +64,18 @@ const app = new Vue({
         switchIntroduction(index) {
             this.currentIntroduction.title = this.imgLinks[index].title;
             this.currentIntroduction.note = this.imgLinks[index].note;
+        },
+        // 方法（函式）：
+        initFloatingMenu() {
+            this.nav.slide = false;
+            this.floatingOptions.show = false;
         }
     },
     created() {
+        // 監聽 resize 事件，以利彈出選單初始化
+        window.addEventListener("resize", this.initFloatingMenu);
+
+        // 撈取後端資料
         const api = `https://multipleproduct.wacocolife.com/api/gallery/showClient/1`;
         const vm = this;
 

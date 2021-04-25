@@ -96,7 +96,7 @@ body #app header #logo {
 }
 
 body #app header nav {
-  margin: 50px 114.5px 0px 0px;
+  margin: 50px 123px 0px 0px;
 }
 
 @media (max-width: 1280px) {
@@ -396,7 +396,7 @@ body #app header nav #nav-links .nav-link span:hover {
 body #app header nav #nav-links .nav-link .floating-options {
   width: 115px;
   height: 88px;
-  padding: 20px 30px 15px;
+  padding: 19px 30px;
   background-color: black;
   position: absolute;
   top: calc(100% + 33px);
@@ -407,6 +407,13 @@ body #app header nav #nav-links .nav-link .floating-options {
 @media (max-width: 1280px) {
   body #app header nav #nav-links .nav-link .floating-options {
     top: 33px;
+  }
+}
+
+@media (max-width: 1280px) {
+  body #app header nav #nav-links .nav-link .floating-options {
+    width: 94.7px;
+    padding: 19px 20px;
   }
 }
 
@@ -421,12 +428,24 @@ body #app header nav #nav-links .nav-link .floating-options ul li {
   height: 18px;
   font-size: 18px;
   line-height: 18px;
+  text-align: center;
   list-style: none;
   cursor: pointer;
 }
 
 body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
-  margin-bottom: 13px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1280px) {
+  body #app header nav #nav-links .nav-link .floating-options ul li {
+    height: 14px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
+    margin-bottom: 14px;
+  }
 }
 
 body #app header nav .nav-links-active {
