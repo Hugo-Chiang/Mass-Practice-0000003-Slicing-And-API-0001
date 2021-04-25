@@ -4,7 +4,6 @@
 
 ## 使用技術
 
-技術：
 * HTML
 * CSS（SCSS）
 * JavaScript（Vue）
