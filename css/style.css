@@ -1,6 +1,18 @@
+@font-face {
+  font-family: 'Noto Sans CJK tc';
+  src: url("/fonts/NotoSansCJKtc-Thin.otf"), url("/fonts/NotoSansCJKtc-Medium.otf"), url("/fonts/NotoSansCJKtc-Bold.otf");
+}
+
+@font-face {
+  font-family: 'MNgaiHK Bold';
+  src: url("/fonts/MNgaiHK-Bold.ttf");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Noto Sans CJK tc';
+  font-weight: thin;
 }
 
 body {
@@ -43,10 +55,13 @@ body #app header {
 }
 
 body #app header #logo {
-  width: 166.71px;
-  height: 83.36px;
+  width: 216.8px;
+  height: 61.2px;
+  padding: 0;
+  font-family: 'MNgaiHK Bold';
   font-size: 83.36px;
-  margin: 18.5px 0px 19px 114.5px;
+  line-height: 61.2px;
+  margin: 44px 0px 36px 138px;
 }
 
 @media (max-width: 1280px) {
@@ -244,12 +259,13 @@ body #app header nav #nav-buttons .line {
 body #app header nav #nav-buttons #login-button {
   width: 56px;
   height: 24px;
-  padding: 6px 0px 4px;
+  padding: 6px 0px 5px;
   background-color: black;
   font-size: 14px;
+  line-height: 13px;
+  font-weight: bold;
   color: white;
   text-align: center;
-  line-height: 16.8px;
 }
 
 body #app header nav .nav-buttons-active {
@@ -332,7 +348,7 @@ body #app header nav #nav-links .nav-link {
   border-left: 1px solid black;
   list-style: none;
   font-size: 18px;
-  line-height: 21.6px;
+  line-height: 18px;
   padding: 0px 19px;
   position: relative;
 }
@@ -347,6 +363,7 @@ body #app header nav #nav-links .nav-link span {
 
 body #app header nav #nav-links .nav-link span:hover {
   color: #00B6C4;
+  font-weight: 600;
 }
 
 @media (max-width: 1280px) {
