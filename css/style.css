@@ -22,6 +22,7 @@ body {
 
 body #app {
   position: relative;
+  z-index: 0;
 }
 
 body #app header {
@@ -62,6 +63,7 @@ body #app header #logo {
   font-size: 83.36px;
   line-height: 61.2px;
   margin: 44px 0px 36px 138px;
+  cursor: pointer;
 }
 
 @media (max-width: 1280px) {
@@ -246,15 +248,15 @@ body #app header nav #nav-buttons {
 
 @media (max-width: 767px) {
   body #app header nav #nav-buttons {
-    top: 88px;
-  }
-}
-
-@media (max-width: 767px) {
-  body #app header nav #nav-buttons {
     -webkit-transition: .5s linear;
     transition: .5s linear;
     top: calc(-1000% + 320px);
+  }
+}
+
+@media (max-width: 420px) {
+  body #app header nav #nav-buttons {
+    left: 65px;
   }
 }
 
@@ -300,6 +302,12 @@ body #app header nav .nav-buttons-active {
     -webkit-transition: .5s linear;
     transition: .5s linear;
     top: 320px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body #app header nav .nav-buttons-translateY {
+    top: 340% !important;
   }
 }
 
@@ -354,6 +362,12 @@ body #app header nav #nav-links {
   }
 }
 
+@media (max-width: 420px) {
+  body #app header nav #nav-links {
+    padding: 30px 135px 15px 65px;
+  }
+}
+
 body #app header nav #nav-links .nav-link {
   border-left: 1px solid black;
   list-style: none;
@@ -398,10 +412,13 @@ body #app header nav #nav-links .nav-link .floating-options {
   height: 88px;
   padding: 19px 30px;
   background-color: black;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
   position: absolute;
   top: calc(100% + 33px);
   left: -1px;
   color: white;
+  visibility: hidden;
 }
 
 @media (max-width: 1280px) {
@@ -446,6 +463,12 @@ body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
   body #app header nav #nav-links .nav-link .floating-options ul li:first-child {
     margin-bottom: 14px;
   }
+}
+
+body #app header nav #nav-links .nav-link .visible {
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  visibility: visible;
 }
 
 body #app header nav .nav-links-active {
@@ -624,7 +647,7 @@ body #app main #list-area #card #card-body {
   width: 100%;
   height: calc(100% - 94px);
   padding: 0px 40px 0px 32px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 body #app main #list-area #card #card-body #item-list {
@@ -637,7 +660,7 @@ body #app main #list-area #card #card-body #item-list .title-item, body #app mai
   width: 100%;
   height: 60px;
   padding: 0px 104px 0px 18px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -735,7 +758,6 @@ body #app main #list-area #card #card-body #item-list .item-action {
 }
 
 body #app main #list-area #card #card-body #item-list .delete-title {
-  width: 75ppx;
   margin-right: 15px;
 }
 
@@ -825,6 +847,8 @@ body #app main #img-links-area #img-links-list .img-link {
   height: 220px;
   background-color: black;
   list-style: none;
+  position: relative;
+  cursor: pointer;
 }
 
 @media (max-width: 1280px) {
@@ -835,6 +859,29 @@ body #app main #img-links-area #img-links-list .img-link {
 
 body #app main #img-links-area #img-links-list .img-link img {
   width: 100%;
+}
+
+body #app main #img-links-area #img-links-list .img-link .img-link-summary {
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: 0;
+  padding: 5px 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body #app main #img-links-area #img-links-list .img-link .img-link-summary h4 {
+  margin: 0 0 3px 0;
+}
+
+body #app main #img-links-area #img-links-list .img-link .img-link-summary p {
+  width: 200px;
+  height: 25px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 body #app main #img-links-area #introduction-block {

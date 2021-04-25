@@ -30,7 +30,8 @@
                 </div>
                 <!-- 漢堡選單結束 -->
                 <!-- 導覽按鈕開始 -->
-                <div id="nav-buttons" :class="{'nav-buttons-active': nav.slide}">
+                <div id="nav-buttons"
+                    :class="[{'nav-buttons-active': nav.slide}, {'nav-buttons-translateY': floatingOptions.show}]">
                     <!-- 社群按鈕開始 -->
                     <div class="nav-button communit-button" :class="communityButton.class"
                         v-for="communityButton in communityButtons">
@@ -49,7 +50,7 @@
                     <li v-for="(link, index) in nav.navLinks" class="nav-link"
                         @click="index == 4 && !floatingOptions.show ? floatingOptions.show = true : floatingOptions.show = false">
                         <span>{{ link }}</span>
-                        <div v-if="index  == 4" v-show="floatingOptions.show" class="floating-options">
+                        <div v-if="index  == 4" class="floating-options" :class="floatingOptions.show ? 'visible' : ''">
                             <ul>
                                 <li v-for="floatingOption in floatingOptions.content">{{ floatingOption }}</li>
                             </ul>
@@ -113,6 +114,10 @@
                 <ul id="img-links-list">
                     <li class="img-link" v-for="(imgLink, index) in imgLinks" @click="switchIntroduction(index)">
                         <img :src="officialURL + imgLink.url" :alt="imgLink.alt">
+                        <div class="img-link-summary">
+                            <h4>{{ imgLink.title }}</h4>
+                            <p v-html="imgLink.gallery_cont"></p>
+                        </div>
                     </li>
                 </ul>
                 <!-- 圖片連結結束 -->

@@ -65,7 +65,7 @@ const app = new Vue({
             this.currentIntroduction.title = this.imgLinks[index].title;
             this.currentIntroduction.note = this.imgLinks[index].note;
         },
-        // 方法（函式）：
+        // 方法（函式）：彈出選單狀態初始化
         initFloatingMenu() {
             this.nav.slide = false;
             this.floatingOptions.show = false;
@@ -81,11 +81,13 @@ const app = new Vue({
 
         this.$http.post(api)
             .then((response) => {
+                console.log(response.data);
                 vm.imgLinks = response.data.items;
                 vm.currentIntroduction.title = vm.imgLinks[0].title;
                 vm.currentIntroduction.note = vm.imgLinks[0].note;
             })
             .catch((error) => {
+                console.log('遠端資料似乎撈不到喔！');
                 console.log(error);
             });
 
