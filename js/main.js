@@ -14,11 +14,11 @@ const app = new Vue({
         communityButtons: {
             facebook: {
                 class: ['facebook'],
-                src: '/img/facebook_icon.png'
+                src: './img/facebook_icon.png'
             },
             line: {
                 class: ['line'],
-                src: '/img/line_icon.png'
+                src: './img/line_icon.png'
 
             }
         },
