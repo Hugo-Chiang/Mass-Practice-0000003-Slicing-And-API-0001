@@ -855,6 +855,13 @@ body #app main #img-links-area #img-links-list .img-link {
   list-style: none;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 1280px) {
@@ -864,7 +871,15 @@ body #app main #img-links-area #img-links-list .img-link {
 }
 
 body #app main #img-links-area #img-links-list .img-link img {
-  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body #app main #img-links-area #img-links-list .img-link img:hover {
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body #app main #img-links-area #img-links-list .img-link .img-link-summary {
